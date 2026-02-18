@@ -1,27 +1,25 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #fff5f8;
+  --foreground: #4a0e0e;
+  --primary-pink: #ff6b9d;
+  --accent-pink: #ff9fb3;
+  --secondary: #fff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Rainbow colors for the input cells */
+  --rainbow-1: #ff4d4d;
+  /* Red */
+  --rainbow-2: #ffa64d;
+  /* Orange */
+  --rainbow-3: #ffff4d;
+  /* Yellow */
+  --rainbow-4: #4dff4d;
+  /* Green */
+  --rainbow-5: #4d94ff;
+  /* Blue */
+  --rainbow-6: #944dff;
+  /* Purple */
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-family: 'Comic Sans MS', 'Chalkboard SE', 'cursive', sans-serif;
 }
 
 * {
@@ -30,13 +28,24 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  /* background: var(--background); */
+  color: var(--foreground);
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

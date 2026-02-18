@@ -1,0 +1,105 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    background: rgba(255, 107, 157, 0.4);
+    padding: 3rem;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.videoOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    border: 4px solid var(--primary-pink);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.overlayVideo {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nextButton {
+    background-color: var(--primary-pink);
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+    animation: popIn 0.3s ease-out;
+}
+
+.nextButton:hover {
+    transform: scale(1.05);
+    background-color: #ff4d8d;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
